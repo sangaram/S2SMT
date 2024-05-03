@@ -7,12 +7,12 @@ Here is a depiction of the overall pipeline:
 
 ## Installation
 Create the environment for the project:
-```
-    conda env create -f environment.yaml
+```bash
+conda env create -f environment.yaml
 ```
 This will create an [Anaconda](https://anaconda.org) environment named `S2SMT` with all the dependencies installed. The you will just need to activate the environment:
-```
-    conda activate S2SMT
+```bash
+conda activate S2SMT
 ```
 
 Voilà ! You are ready to go !
@@ -21,7 +21,7 @@ Voilà ! You are ready to go !
 
 ### Inference
 
-```
+```bash
 python main --mode infer --audio your_audio --src_lang src_lang --trg_lang trg_lang
 ```
 
@@ -31,7 +31,7 @@ python main --mode infer --audio your_audio --src_lang src_lang --trg_lang trg_l
 ### Sampling
 In order to test the model on random samples of the Librispeech dataset or the French subset of the Multilingual Librispeech dataset, use the following command:
 
-```
+```bash
 python --mode random_sampling --src_lang src_lang --trg_lang trg_lang --n_samples n_samples
 ```
 > 📝: Be aware that this command will download the datasets and they are heavy. So make sure you have enough space on your disk.
@@ -40,7 +40,7 @@ python --mode random_sampling --src_lang src_lang --trg_lang trg_lang --n_sample
 ### Evaluation
 For evaluating the model on the test sets of the datasets, one need to run the following command:
 
-```
+```bash
 python --mode eval --src_lang src_lang --trg_lang trg_lang
 ```
 > This will compute the BLEU score of the MT module, the WER score of the ASR module and the ASR-BLEU score of the overall model as defined by this [paper](https://arxiv.org/pdf/2107.05604).
