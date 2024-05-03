@@ -1,0 +1,12 @@
+TTS
+torch
+torchaudio
+torchvision
+transformers
+datasets
+evaluate
+jiwer
+soundfile
+librosa
+sentencepiece
+sacrebleu
